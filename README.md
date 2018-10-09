@@ -9,3 +9,5 @@ w03 Convert seconds using while loop.cpp
     sum(n1,n2).cpp
     BMI using while.cpp
 w04 menu.cpp    
+    menu(funtion).cpp
+w05 menu3.cpp
