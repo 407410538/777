@@ -6,7 +6,6 @@ int isleap(int year){
 	else 
 	    return 0;
 }
-
 int time(int hh,int mm,int ss){
 	int i=0;
 	i+=hh*3600;
@@ -14,7 +13,6 @@ int time(int hh,int mm,int ss){
 	i+=ss;
 	return i;
 }
-
 int main(){
 	int choice=0;
     int year, hh, mm, ss, sec;
