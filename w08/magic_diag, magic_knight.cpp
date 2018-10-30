@@ -29,26 +29,26 @@ void mag_knight(int m[][max],int n){
 	m[row][col]=1;
 	col++;
 	for(int i=2;i<=n*n;i++){
-		if(i%n==1)
+		if(i%n==1){
 			row=(row-1+n)%n;
+		}	
 		else{
 			row=(row-2+n)%n;
 			col=col%n+1;	
 		}
+		if(row==0)
+			row=n;
 		m[row][col]=i;
 	}
 }
 int main(){
 	int m[max][max]={};
 	int n=5;
-	
 	printf("Diagonal Move\n");
 	mag_diag(m,n);
 	prarray(m,n);
-	
 	printf("Knight Move\n");
 	mag_knight(m,n);
 	prarray(m,n);
-	
 	return 0;
 }
