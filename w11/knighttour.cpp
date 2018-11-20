@@ -12,7 +12,8 @@ void prarr(int m[][8]){
 			printf("%2d ",m[i][j]);
 		printf("\n");
 	}
-}Pos findnext(int m[][8],int row,int col){
+}
+Pos findnext(int m[][8],int row,int col){
 	int h[8]={2,1,1,2,-1,-1,-2,-2};
 	int v[8]={1,-2,2,-1,2,-2,-1,1};
 	Pos pos;
