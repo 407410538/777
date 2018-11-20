@@ -55,7 +55,7 @@ int main(){
 	srand(time(NULL));
 	row=rand()%8;
 	col=rand()%8;
-	
+	printf("1: (row,col)=(%d,%d)\n\n",row,col);
 	m[row][col]=1;
 	for(int i=2;i<=64;i++){
 		pos=nextbest(acce,row,col);
