@@ -34,12 +34,10 @@ Pos findnext(int m[][8],int row,int col){
 int main(){
 	int m[8][8]={0};
 	int row,col;
-	
 	Pos pos;
 	srand(time(NULL));
 	row=rand()%8;
 	col=rand()%8;
-	
 	m[row][col]=1;
 	for(int i=2;i<=65;i++){
 		pos=findnext(m,row,col);
