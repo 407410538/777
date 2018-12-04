@@ -176,5 +176,5 @@ void printList( ListNodePtr currentPtr )
       } /* end while */
 
       printf( "NULL\n\n" );
-   } /* end else */
+   } 
 } 
