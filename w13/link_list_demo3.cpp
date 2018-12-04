@@ -1,10 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+struct Date
+{
+    int year;
+    int month;
+    int day;
+};
+
 /* self-referential structure */
 struct ListNode {
-   char data; /* each listNode contains a character */
-   ListNode *nextPtr; /* pointer to next node*/
+    int id;             // lotto id
+    Date date;   // opening date
+    int num[6];         // winning numbers
+    ListNode *nextPtr; /* pointer to next node*/
 }; /* end structure listNode */
 
 //typedef struct listNode ListNode; /* synonym for struct listNode */
@@ -21,7 +30,7 @@ int main( void )
 {
    ListNodePtr startPtr = NULL; /* initially there are no nodes */
    int choice; /* user's choice */
-   char item; /* char entered by user */
+   ListNode item; /* char entered by user */
 
    instructions(); /* display the menu */
    printf( "? " );
@@ -32,8 +41,10 @@ int main( void )
 
       switch ( choice ) {
          case 1:
-            printf( "Enter a character: " );
-            scanf( "\n%c", &item );
+            printf( "Enter ID: " );
+            scanf( "%d", &item.id );
+            printf( "Enter the year: " );
+            scanf("%d", &item.id.year);
             insert( &startPtr, item ); /* insert item in list */
             printList( startPtr );
             break;
@@ -173,8 +184,7 @@ void printList( ListNodePtr currentPtr )
       while ( currentPtr != NULL ) {
          printf( "%c --> ", currentPtr->data );
          currentPtr = currentPtr->nextPtr;
-      } /* end while */
-
+      }
       printf( "NULL\n\n" );
    } 
 } 
